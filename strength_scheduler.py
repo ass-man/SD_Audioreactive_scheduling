@@ -100,8 +100,9 @@ with open("c:/temp/bb.txt","w") as f:
 # %%
 
 #zoom
+#this is kinda fucked, i think it could work if you make the zoom range between 1 and 1.005 or something very low
 out = ""
-for f in getRMSE(y_perc):
+for f in getRMSE(y_harm,lower, upper,cap):
     x = 1 + ( 0.07 * f[1])
     out += f"{f[0]}:({x:.3f})," # inverse koska colab
 with open("c:/temp/aa.txt","w") as f:
